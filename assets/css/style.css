@@ -1,132 +1,20 @@
-/*<<< -------------- CSS Reset ------------>>>*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Undefined mixin.
+ *     ,
+ * 104 | /   @include media-tablet {
+ * 105 | |     width: 573px;
+ * 106 | |     height: 614px;
+ * 107 | |     flex-direction: column;
+ * 108 | \   }
+ *     '
+ *   assets\css\style.scss 104:3  root stylesheet */
 
-/*<<< -------------- Base h1-h3 and p------------>>>*/
-h1 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 56px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 104 \2502  \250c    @include media-tablet {\a 105 \2502  \2502      width: 573px;\a 106 \2502  \2502      height: 614px;\a 107 \2502  \2502      flex-direction: column;\a 108 \2502  \2514    }\a     \2575 \a   assets\\css\\style.scss 104:3  root stylesheet";
 }
-
-h2 {
-  font-size: 40px;
-  font-weight: 800;
-  line-height: normal;
-}
-
-h3 {
-  font-size: 32px;
-  font-weight: 800;
-  line-height: normal;
-}
-
-h4 {
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 25px;
-}
-
-p {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 25px;
-  color: #777f98;
-}
-
-/*<<< -------------- Button & Input Commponents ------------>>>*/
-.btn {
-  width: 140px;
-  height: 48px;
-  border-radius: 24px;
-  background-color: #3ee9e5;
-  color: #093f68;
-  font-weight: 800;
-  line-height: 25px;
-  text-align: center;
-}
-.btn:hover, .btn:active {
-  background-color: #080c20;
-  color: #ffffff;
-  border: 2px solid #3ee9e5;
-}
-
-.txt-input {
-  width: 320px;
-  height: 48px;
-  border-radius: 24px;
-  background-color: #093f68;
-  color: #ffffff;
-}
-.txt-input:active {
-  border: 2px solid #3ee9e5;
-}
-.txt-input:invalid {
-  border: 2px solid #ff2965;
-}
-
-.page {
-  color: #ffffff;
-  background-color: #080c20;
-  padding: 80px 0px 130px;
-}
-@media (max-width: 800px) {
-  .page {
-    padding: 55px 0px 115px;
-  }
-}
-.page__header {
-  margin-left: 165px;
-  margin-bottom: 115px;
-}
-@media (max-width: 800px) {
-  .page__header {
-    margin-left: 87px;
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 400px) {
-  .page__header {
-    margin: auto;
-    margin-bottom: 80px;
-  }
-}
-
-.header {
-  width: 120px;
-  height: 35px;
-  background: url(../logo.svg);
-}
-
-.main {
-  width: 100%;
-  display: flex;
-  gap: 200px;
-}
-
-.hero {
-  width: 100%;
-  height: 459px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../illustration-hero-left.svg) no-repeat -50px 0, url(../illustration-hero-right.svg) no-repeat 108% 0;
-}
-.hero__text {
-  width: 540px;
-  height: 318px;
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  color: #ffffff;
-}
-.hero__logo {
-  margin-top: auto;
-}
-
-/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,7 @@
 @use "base";
 
+/*<<<------------------ Page Layout -------------------->>> */
+
 .page {
   color: base.$color4;
   background-color: base.$color5;
@@ -25,17 +27,26 @@
   }
 }
 
+/*<<<------------------ Header Section -------------------->>> */
+
 .header {
   width: 120px;
   height: 35px;
   background: url(../logo.svg);
 }
 
+/*<<<------------------ Main Section -------------------->>> */
+
 .main {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 200px;
 }
+
+/*<<<------------------ Hero Section -------------------->>> */
 
 .hero {
   width: 100%;
@@ -43,8 +54,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../illustration-hero-left.svg) no-repeat -50px 0,
-    url(../illustration-hero-right.svg) no-repeat 108% 0;
+  background: url(../illustration-hero-left.svg) no-repeat,
+    url(../bg-hero-squiggle.svg) no-repeat,
+    url(../illustration-hero-right.svg) no-repeat;
+  background-position: -50px 0px, 50% 50%, 108% 0%;
+
+  @include base.media-tablet {
+    background-position: -200px 0px, 50% 50%, 155% 0%;
+  }
+
+  @include base.media-custom(600px) {
+    background: url(../illustration-hero-mobile.png) no-repeat 50% 0% / 400px
+      233px;
+    height: 650px;
+    align-items: flex-end;
+  }
 
   &__text {
     width: 540px;
@@ -55,8 +79,58 @@
     text-align: center;
     align-items: center;
     color: base.$color4;
+
+    @include base.media-tablet {
+      width: 450px;
+    }
+
+    @include base.media-custom(600px) {
+      width: 327px;
+    }
   }
   &__logo {
     margin-top: auto;
+  }
+}
+
+/*<<<------------------ Feature Section -------------------->>> */
+
+.feature {
+  width: 1110px;
+  height: 383px;
+  display: flex;
+  gap: 30px;
+
+  @include media-tablet {
+    width: 573px;
+    height: 614px;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 255px;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &--alternate {
+      align-self: flex-end;
+    }
+
+    @include media-tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    width: 160px;
+    height: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45px;
+    background-color: base.$color2;
+    margin-bottom: auto;
   }
 }
