@@ -44,6 +44,10 @@
   justify-content: center;
   align-items: center;
   gap: 200px;
+
+  @include base.media-custom(1200px) {
+    gap: 100px;
+  }
 }
 
 /*<<<------------------ Hero Section -------------------->>> */
@@ -101,10 +105,18 @@
   display: flex;
   gap: 30px;
 
-  @include media-tablet {
+  @include base.media-custom(1200px) {
     width: 573px;
     height: 614px;
     flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @include base.media-custom(600px) {
+    width: 327px;
+    height: 1134px;
+    text-align: center;
+    gap: 55px;
   }
 
   &__item {
@@ -112,14 +124,40 @@
     height: 335px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 48px;
 
     &--alternate {
       align-self: flex-end;
+      @include base.media-custom(1200px) {
+        align-self: flex-start;
+      }
     }
 
-    @include media-tablet {
+    @include base.media-custom(1200px) {
+      width: 515px;
       flex-direction: row;
+      gap: 55px;
+    }
+
+    @include base.media-custom(600px) {
+      width: 327px;
+      align-items: center;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__text {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include base.media-custom(1200px) {
+      width: 340px;
+      height: 86px;
+      gap: 11px;
+      align-self: center;
     }
   }
 
@@ -131,6 +169,5 @@
     justify-content: center;
     border-radius: 45px;
     background-color: base.$color2;
-    margin-bottom: auto;
   }
 }

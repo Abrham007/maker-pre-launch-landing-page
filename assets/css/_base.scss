@@ -64,7 +64,7 @@ p {
   color: $color3;
 }
 
-/*<<< -------------- Button & Input Commponents ------------>>>*/
+/*<<< -------------- UI Commponents ------------>>>*/
 
 .btn {
   width: 140px;
@@ -98,4 +98,9 @@ p {
   &:invalid {
     border: 2px solid $color6;
   }
+}
+
+/*<<< -------------- Utility ------------>>>*/
+.highlight-color {
+  color: $color1;
 }
