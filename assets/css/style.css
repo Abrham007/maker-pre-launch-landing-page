@@ -54,17 +54,17 @@ p {
   border: 2px solid #3ee9e5;
 }
 
-.txt-input {
+.input {
   width: 320px;
   height: 48px;
   border-radius: 24px;
   background-color: #093f68;
   color: #ffffff;
 }
-.txt-input:active {
+.input:active {
   border: 2px solid #3ee9e5;
 }
-.txt-input:invalid {
+.input:invalid {
   border: 2px solid #ff2965;
 }
 
@@ -244,6 +244,66 @@ p {
   justify-content: center;
   border-radius: 45px;
   background-color: #093f68;
+}
+
+/*<<<------------------ Pricing Section -------------------->>> */
+.pricing {
+  width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
+}
+.pricing__text {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+.pricing__card-container {
+  width: 920px;
+  height: 482px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.card {
+  width: 445px;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #093f68;
+  padding: 38px;
+  position: relative;
+  border-radius: 8px;
+}
+.card--alternate {
+  background-color: #3ee9e5;
+  color: #080c20;
+}
+.card__logo {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  top: -25px;
+}
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  list-style-image: url(../icon-check-alternate.svg);
+  list-style-position: inside;
+}
+.card--alternate .card__list {
+  list-style-image: url(../icon-check.svg);
 }
 
 /*# sourceMappingURL=style.css.map */

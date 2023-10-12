@@ -171,3 +171,70 @@
     background-color: base.$color2;
   }
 }
+
+/*<<<------------------ Pricing Section -------------------->>> */
+
+.pricing {
+  width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
+
+  &__text {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  &__card-container {
+    width: 920px;
+    height: 482px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.card {
+  width: 445px;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: base.$color2;
+  padding: 38px;
+  position: relative;
+  border-radius: 8px;
+
+  &--alternate {
+    background-color: base.$color1;
+    color: base.$color5;
+  }
+
+  &__logo {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: -25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    list-style-image: url(../icon-check-alternate.svg);
+    list-style-position: inside;
+
+    .card--alternate & {
+      list-style-image: url(../icon-check.svg);
+    }
+  }
+}
