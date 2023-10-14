@@ -41,8 +41,15 @@ p {
   font-weight: 800;
   line-height: 25px;
   text-align: center;
+  border: none;
+}
+@media (max-width: 600px) {
+  .btn {
+    width: 100%;
+  }
 }
 .btn:hover, .btn:active {
+  cursor: pointer;
   background-color: #080c20;
   color: #ffffff;
   border: 2px solid #3ee9e5;
@@ -51,20 +58,40 @@ p {
 .input {
   width: 320px;
   height: 48px;
+  padding: 12px 18px;
   border-radius: 24px;
   background-color: #093f68;
   color: #ffffff;
+  border: none;
+  outline: none;
 }
-.input:active {
+.input:active, .input:focus {
   border: 2px solid #3ee9e5;
 }
-.input:invalid {
-  border: 2px solid #ff2965;
+.input:focus:invalid {
+  outline: none;
 }
 
 /*<<< -------------- Utility ------------>>>*/
 .highlight-color {
   color: #3ee9e5;
+}
+
+.error {
+  display: block;
+  margin-left: 18px;
+}
+
+.error-text {
+  color: #ff2965;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.invalid {
+  border: 2px solid #ff2965;
 }
 
 /*<<<------------------ Page Layout -------------------->>> */
@@ -93,6 +120,9 @@ p {
     margin: auto;
     margin-bottom: 80px;
   }
+}
+.page__main {
+  margin-bottom: 160px;
 }
 
 /*<<<------------------ Header Section -------------------->>> */
@@ -173,15 +203,15 @@ p {
 @media (max-width: 1200px) {
   .feature {
     width: 573px;
-    height: 614px;
+    height: min-content;
     flex-direction: column;
+    gap: 40px;
     align-items: flex-end;
   }
 }
 @media (max-width: 600px) {
   .feature {
     width: 327px;
-    height: 1134px;
     text-align: center;
     gap: 55px;
   }
@@ -204,6 +234,7 @@ p {
 @media (max-width: 1200px) {
   .feature__item {
     width: 515px;
+    height: 125px;
     flex-direction: row;
     gap: 55px;
   }
@@ -211,6 +242,7 @@ p {
 @media (max-width: 600px) {
   .feature__item {
     width: 327px;
+    height: 245px;
     align-items: center;
     flex-direction: column;
     gap: 32px;
@@ -239,6 +271,12 @@ p {
   border-radius: 45px;
   background-color: #093f68;
 }
+@media (max-width: 1200px) {
+  .feature__icon {
+    width: 120px;
+    height: 124px;
+  }
+}
 
 /*<<<------------------ Pricing Section -------------------->>> */
 .pricing {
@@ -248,8 +286,18 @@ p {
   gap: 72px;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .pricing {
+    width: 573px;
+  }
+}
+@media (max-width: 400px) {
+  .pricing {
+    width: 327px;
+  }
+}
 .pricing__text {
-  width: 540px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,10 +307,16 @@ p {
 }
 .pricing__card-container {
   width: 920px;
-  height: 482px;
   display: flex;
   flex-direction: row;
   gap: 30px;
+}
+@media (max-width: 950px) {
+  .pricing__card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+  }
 }
 
 .card {
@@ -275,10 +329,18 @@ p {
   padding: 38px;
   position: relative;
   border-radius: 8px;
+  align-self: center;
 }
 .card--alternate {
+  height: 449px;
   background-color: #3ee9e5;
   color: #080c20;
+}
+@media (max-width: 400px) {
+  .card {
+    width: 327px;
+    height: 436px;
+  }
 }
 .card__logo {
   width: 46px;
@@ -310,6 +372,27 @@ p {
 }
 .card--alternate .card__list {
   list-style-image: url(../icon-check.svg);
+}
+
+/*<<<------------------ Footer Section -------------------->>> */
+.footer {
+  width: 100%;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  background-image: url(../bg-footer-squiggle.svg);
+}
+.footer__form {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .footer__form {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

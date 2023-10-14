@@ -69,9 +69,15 @@ p {
   font-weight: 800;
   line-height: 25px;
   text-align: center;
+  border: none;
+
+  @include media-custom(600px) {
+    width: 100%;
+  }
 
   &:hover,
   &:active {
+    cursor: pointer;
     background-color: $color5;
     color: $color4;
     border: 2px solid $color1;
@@ -81,20 +87,41 @@ p {
 .input {
   width: 320px;
   height: 48px;
+  padding: 12px 18px;
   border-radius: 24px;
   background-color: $color2;
   color: $color4;
+  border: none;
+  outline: none;
 
-  &:active {
+  &:active,
+  &:focus {
     border: 2px solid $color1;
   }
 
-  &:invalid {
-    border: 2px solid $color6;
+  &:focus:invalid {
+    outline: none;
   }
 }
 
 /*<<< -------------- Utility ------------>>>*/
 .highlight-color {
   color: $color1;
+}
+
+.error {
+  display: block;
+  margin-left: 18px;
+}
+
+.error-text {
+  color: #ff2965;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.invalid {
+  border: 2px solid $color6;
 }
