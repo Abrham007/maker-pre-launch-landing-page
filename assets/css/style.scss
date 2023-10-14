@@ -223,6 +223,20 @@
     top: -25px;
   }
 
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 25px;
+    color: inherit;
+  }
+
+  &__price {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: normal;
+    color: inherit;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

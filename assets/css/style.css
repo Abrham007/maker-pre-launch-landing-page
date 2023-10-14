@@ -13,18 +13,12 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
-  font-weight: 800;
-  line-height: normal;
-}
-
-h3 {
   font-size: 32px;
   font-weight: 800;
   line-height: normal;
 }
 
-h4 {
+h3 {
   font-size: 18px;
   font-weight: 800;
   line-height: 25px;
@@ -291,6 +285,18 @@ p {
   height: 46px;
   position: absolute;
   top: -25px;
+}
+.card__title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 25px;
+  color: inherit;
+}
+.card__price {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  color: inherit;
 }
 .card__list {
   display: flex;
