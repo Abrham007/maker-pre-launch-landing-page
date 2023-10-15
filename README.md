@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/Abrham007/maker-prelaunch-landing-page.git)
-- Live Site URL: [live site URL](https://abrham007.github.io/maker-prelaunch-landing-page/)
+- Solution URL: [solution URL](https://github.com/Abrham007/maker-pre-launch-landing-page.git)
+- Live Site URL: [live site URL](https://abrham007.github.io/maker-pre-launch-landing-page/)
 
 ## My process
 
